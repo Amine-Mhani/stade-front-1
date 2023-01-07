@@ -20,6 +20,7 @@ import AddPatient from './pages/Patient/AddPatient';
 import AddMaladie from './pages/Maladie/AddMaladie';
 import AddStade from './pages/Maladie/AddStade';
 import StadeImages from './pages/Maladie/StadeImages';
+import Redirect from './pages/Redirect';
 
 
 export default class App extends Component {
@@ -43,6 +44,7 @@ export default class App extends Component {
            <div className="container-fluid p-0">
           
               <Routes>    
+              <Route path="/" element={<Redirect/>} />
                <Route path="patient" element={<Patient/>} />
                <Route path="patient/:id" element={<Maladie/>} />
                <Route path="patient/:id/maladie/:id" element={<Stade/>} />
